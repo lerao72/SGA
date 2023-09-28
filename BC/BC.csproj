@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0FD50C0-1A2E-460B-AB7C-A3F02EE3E26A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BC</RootNamespace>
+    <AssemblyName>BC</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LT48, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LT48\LT48\bin\x86\Release\LT48.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Articulos\Articulos.cs" />
+    <Compile Include="Articulos\FamiliasArticulos.cs" />
+    <Compile Include="Articulos\ProveedorDeArticulo.cs" />
+    <Compile Include="Articulos\SelectorDeArticulos.cs">
+    </Compile>
+    <Compile Include="Compras\Pagos.cs" />
+    <Compile Include="Compras\SelectorDePagosAContacto.cs" />
+    <Compile Include="Comun.cs" />
+    <Compile Include="Contactos\Contactos.cs" />
+    <Compile Include="Contactos\Cuentas.cs" />
+    <Compile Include="Contactos\DatosContacto.cs" />
+    <Compile Include="Contactos\Direcciones.cs" />
+    <Compile Include="Contactos\SelectorDeContactos.cs" />
+    <Compile Include="FormSelectorGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectorGrid.Designer.cs">
+      <DependentUpon>FormSelectorGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVariasOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVariasOpciones.Designer.cs">
+      <DependentUpon>FormVariasOpciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Varios\Recordatorio.cs" />
+    <Compile Include="Varios\SelectorDeRecordatorios.cs" />
+    <Compile Include="Ventas\Albaran.cs" />
+    <Compile Include="Ventas\AlbaranA.cs" />
+    <Compile Include="Ventas\Cobro.cs" />
+    <Compile Include="Ventas\SelectorDeFacturasDeContacto.cs" />
+    <Compile Include="Ventas\Factura.cs" />
+    <Compile Include="Ventas\SelectorDeAlbaranesDeContacto.cs" />
+    <Compile Include="Ventas\SelectorDeCobrosContacto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormSelectorGrid.resx">
+      <DependentUpon>FormSelectorGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVariasOpciones.resx">
+      <DependentUpon>FormVariasOpciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search16_h.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
